@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_operations.h                                  :+:      :+:    :+:   */
+/*   sort_data.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/10 16:30:49 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/10 17:20:31 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORT_OPERATIONS_H
-# define SORT_OPERATIONS_H
+#ifndef SORT_DATA_H
+# define SORT_DATA_H
 
-# include "../libft/libft.h"
+#include "define.h"
 
-typedef struct s_stack
-{
-	t_list	*head;
-	int size; //	要素数．ソート時に全体を何分割するのかや，最後のノードはどこかを参照するときに使う
-}			t_stack;
+void	sort_data(t_data *data);
 
-typedef struct s_data
-{
-	t_stack	stack_a;
-	t_stack	stack_b;
-}			t_data;
+// sort_operations
+void	sa(t_data *data);
+void	sb(t_data *data);
+void	ss(t_data *data);
+void	pa(t_data *data);
+void	pb(t_data *data);
+void	ra(t_data *data);
+void	rb(t_data *data);
+void	rr(t_data *data);
+void	rra(t_data *data);
+void	rrb(t_data *data);
+void	rrr(t_data *data);
 
 #endif
 

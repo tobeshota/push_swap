@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_data.h                                        :+:      :+:    :+:   */
+/*   check_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:28:26 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/10 16:29:46 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/10 17:26:08 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORT_DATA_H
-# define SORT_DATA_H
+#include "../../inc/check_data.h"
 
-#include "sort_operations/sort_operations.h"
-
-#endif
+void	check_data(t_data *data)
+{
+	;
+}

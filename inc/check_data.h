@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   check_data.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/10 16:37:36 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/10 17:06:54 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/10 17:21:12 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef CHECK_DATA_H
+# define CHECK_DATA_H
 
-# include "check_data/check_data.h"
-# include "get_data/get_data.h"
-# include "libft/libft.h"
-# include "sort_data/sort_data.h"
-# include "utils/utils.h"
+#include "define.h"
+
+void check_data(t_data *data);
 
 #endif
