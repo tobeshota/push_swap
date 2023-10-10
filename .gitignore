@@ -1,0 +1,10 @@
+# debug files
+.vscode/
+*.dSTM/
+
+# output files
+*.out
+push_swap
+
+# object files
+*.o

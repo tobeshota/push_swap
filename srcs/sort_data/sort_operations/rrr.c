@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   rrr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/10 16:37:36 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/10 17:22:30 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../../../inc/sort_data.h"
 
-# include "check_data/check_data.h"
-# include "get_data/get_data.h"
-# include "libft/libft.h"
-# include "sort_data/sort_data.h"
-# include "utils/utils.h"
-
-#endif
+void	rrr(t_data *data)
+{
+	;
+}
