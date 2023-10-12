@@ -6,6 +6,6 @@
 *.out
 push_swap
 
-# object files
+# object, archive files
 *.o
-.a
+*.a
