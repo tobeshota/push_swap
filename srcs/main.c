@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/12 17:11:45 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/13 00:53:00 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	main(int argc, char **argv)
 
 if(argc < 0)
 	exit_with_error();
-
 	//	ソート対象となるデータを取得する
 	get_data(argv, &data);
 	//	ソート対象となるデータが適切であるかをチェックする

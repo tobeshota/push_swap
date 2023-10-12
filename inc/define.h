@@ -6,14 +6,14 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:00:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/12 20:35:45 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/13 00:51:46 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DEFINE_H
 # define DEFINE_H
 
-# include "../libft/libft.h"
+# include "../libft/inc/libft.h"
 
 typedef struct s_stack
 {

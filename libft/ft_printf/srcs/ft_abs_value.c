@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_abs_value.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/13 00:51:36 by toshota          ###   ########.fr       */
+/*   Created: 2023/06/11 11:00:51 by tobeshota         #+#    #+#             */
+/*   Updated: 2023/10/13 00:32:57 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
 
-# include "../libft/inc/libft.h"
-# include "check_data.h"
-# include "define.h"
-# include "get_data.h"
-# include "sort_data.h"
-# include "utils.h"
-
-#endif
+long	ft_abs_value(long n)
+{
+	if (n < 0)
+		n *= -1;
+	return (n);
+}

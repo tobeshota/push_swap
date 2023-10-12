@@ -6,14 +6,14 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:07:47 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/12 20:36:05 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/13 00:51:57 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_H
 # define UTILS_H
 
-# include "../libft/libft.h"
+# include "../libft/inc/libft.h"
 
 void exit_with_error(void);
 
