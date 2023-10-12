@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 17:07:47 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/12 15:24:09 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/12 15:23:49 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "../../inc/utils.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-
-void exit_with_error(void);
-
-#endif
+void exit_with_error(void)
+{
+	write(STDERR_FILENO, "error\n", 7);
+	exit(2);
+}
