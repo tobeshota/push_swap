@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   define.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:00:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/10 17:21:16 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/12 20:35:45 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DEFINE_H
 # define DEFINE_H
 
-# include "../srcs/libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct s_stack
 {

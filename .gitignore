@@ -8,3 +8,4 @@ push_swap
 
 # object files
 *.o
+.a

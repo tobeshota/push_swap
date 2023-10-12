@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: toshota <toshota@student.42.fr>            +#+  +:+       +#+         #
+#    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/10/12 17:51:48 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/12 20:39:32 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,36 +25,11 @@ INCS_FILES			=	check_data.h define.h get_data.h push_swap.h sort_data.h utils.h
 INCS				=	$(addprefix $(INCS_DIR), $(INCS_FILES))
 
 # SRCS
-MAIN_SRCS			=	srcs/main.c
-
-GET_DATA_DIR		=	srcs/get_data/
-GET_DATA_FILES		=	get_data.c
-GET_DATA_SRCS		=	$(addprefix $(GET_DATA_DIR), $(GET_DATA_FILES))
-
-CHECK_DATA_DIR		=	srcs/check_data/
-CHECK_DATA_FILES	=	check_data.c
-CHECK_DATA_SRCS		=	$(addprefix $(CHECK_DATA_DIR), $(CHECK_DATA_FILES))
-
-SORT_DATA_DIR		=	srcs/sort_data/
-SORT_DATA_FILES		=	sort_data.c
-SORT_DATA_SRCS		=	$(addprefix $(SORT_DATA_DIR), $(SORT_DATA_FILES))
-
-UTILS_DIR			=	srcs/utils/
-UTILS_FILES			=	utils.c
-UTILS_SRCS			=	$(addprefix $(UTILS_DIR), $(UTILS_FILES))
-
-OBJS_DIR			= objs
-SRCS_DIR			= srcs
-
-SRCS				+= $(GET_DATA_SRCS)
-SRCS				+= $(CHECK_DATA_SRCS)
-SRCS				+= $(SORT_DATA_SRCS)
-SRCS				+= $(UTILS_SRCS)
-SRCS				+= $(MAIN_SRCS)
-
-
-OBJS				= $(patsubst $(SRCS_DIR)/%.c,$(OBJS_DIR)/%.o,$(SRCS))
-
+# $ echo srcs/**/*.c
+OBJS_DIR			= objs/
+SRCS_DIR			= srcs/
+SRCS				= srcs/main.c srcs/check_data/check_data.c srcs/get_data/get_data.c srcs/sort_data/sort_data.c srcs/utils/utils.c
+OBJS				= $(patsubst $(SRCS_DIR)%.c,$(OBJS_DIR)%.o,$(SRCS))
 
 all:		$(NAME)
 
