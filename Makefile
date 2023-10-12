@@ -6,7 +6,7 @@
 #    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/10/12 20:39:32 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/12 20:46:44 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,8 @@ RM					=	rm -f
 LIBFT_DIR			=	libft/
 
 # INCS
-INCS_DIR			=	inc/
-INCS_FILES			=	check_data.h define.h get_data.h push_swap.h sort_data.h utils.h
 # -I に渡すのは，ディレクトリのパス．ヘッダーファイルではない．
-INCS				=	$(addprefix $(INCS_DIR), $(INCS_FILES))
+INCS_DIR			=	inc/
 
 # SRCS
 # $ echo srcs/**/*.c
@@ -33,7 +31,7 @@ OBJS				= $(patsubst $(SRCS_DIR)%.c,$(OBJS_DIR)%.o,$(SRCS))
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS) $(INCS) Makefile
+$(NAME):	$(OBJS) Makefile
 	make -C $(LIBFT_DIR)
 	$(CC) $(CFLAGS) $(LIBFT_DIR)libft.a $(OBJS) -o $(NAME)
 
