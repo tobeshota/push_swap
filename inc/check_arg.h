@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_cmd_line_arg.h                               :+:      :+:    :+:   */
+/*   check_arg.h                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,9 +16,9 @@
 # include "define.h"
 # include "utils.h"
 
-void	check_cmd_line_arg(int argc, char **cmd_line_arg);
-void	check_is_cmd_line_arg_exist(int argc);
-void	check_is_cmd_line_arg_digit(char **cmd_line_argv);
-void	check_is_cmd_line_arg_int(char **cmd_line_arg);
+void	check_arg(int argc, char **arg);
+void	check_is_arg_exist(int argc);
+void	check_is_arg_digit(char **argv);
+void	check_is_arg_int(char **arg);
 
 #endif

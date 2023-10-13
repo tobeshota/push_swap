@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/13 17:15:08 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/13 17:43:10 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	t_data	data;
 
 	//	ソート対象となるデータが適切であるかをチェックする
-	check_cmd_line_arg(argc, argv + 1);
+	check_arg(argc, argv);
 
 	//	ソート対象となるデータを取得する
 	get_data(argc, argv, &data);

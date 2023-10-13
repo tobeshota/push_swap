@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_is_cmd_line_arg_digit.c                      :+:      :+:    :+:   */
+/*   check_is_arg_digit.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:06:31 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/13 16:36:10 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/13 17:37:10 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,36 +17,36 @@ static int	ft_issign(int c)
 	return (c == '+' || c == '-');
 }
 
-static int	is_cmd_line_arg_consists_of_num_or_sign(char *str)
+static int	is_arg_consists_of_num_or_sign(char *argv)
 {
-	while (*str)
+	while (*argv)
 	{
-		if (ft_isdigit(*str) == FALSE && ft_issign(*str) == FALSE)
+		if (ft_isdigit(*argv) == FALSE && ft_issign(*argv) == FALSE)
 			return (FALSE);
-		str++;
+		argv++;
 	}
 	return (TRUE);
 }
 
-static int	is_cmd_line_arg_contains_num(char *str)
+static int	is_arg_contains_num(char *argv)
 {
-	while (*str)
+	while (*argv)
 	{
-		if (ft_isdigit(*str) == TRUE)
+		if (ft_isdigit(*argv) == TRUE)
 			return (TRUE);
-		str++;
+		argv++;
 	}
 	return (FALSE);
 }
 
-static int	is_sign_exist_other_than_bos(char *str)
+static int	is_sign_exist_other_than_bos(char *argv)
 {
-	str++;
-	while (*str)
+	argv++;
+	while (*argv)
 	{
-		if (ft_issign(*str) == TRUE)
+		if (ft_issign(*argv) == TRUE)
 			return (FALSE);
-		str++;
+		argv++;
 	}
 	return (TRUE);
 }
@@ -58,18 +58,18 @@ static int	is_sign_exist_other_than_bos(char *str)
  */
 // ＊0042は42とみなした
 // （∵　bashで`expr 8 + 0042`を実行すると`50`が標準出力に出力されることから，bashでは0042を42と同義を見なしているため）
-void	check_is_cmd_line_arg_digit(char **cmd_line_arg)
+void	check_is_arg_digit(char **argv)
 {
 	int	arg_i;
 
-	arg_i = 0;
-	while (cmd_line_arg[arg_i])
+	arg_i = 1;
+	while (argv[arg_i])
 	{
-		if (is_cmd_line_arg_consists_of_num_or_sign(cmd_line_arg[arg_i]) == FALSE)
+		if (is_arg_consists_of_num_or_sign(argv[arg_i]) == FALSE)
 			exit_with_error();
-		if (is_cmd_line_arg_contains_num(cmd_line_arg[arg_i]) == FALSE)
+		if (is_arg_contains_num(argv[arg_i]) == FALSE)
 			exit_with_error();
-		if (is_sign_exist_other_than_bos(cmd_line_arg[arg_i]) == FALSE)
+		if (is_sign_exist_other_than_bos(argv[arg_i]) == FALSE)
 			exit_with_error();
 		arg_i++;
 	}
