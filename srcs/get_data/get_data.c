@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   get_data.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/12 15:26:12 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/13 15:10:38 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/get_data.h"
 
-void	get_data(char **argv, t_data *data)
+void	get_data(int argc, char **argv, t_data *data)
 {
-	exit_with_error();
-	// データ（数字）が文字列でないかをチェックする（個々のコマンドライン引数に格納されている値が+,-,0,1,2,3,4,5,6,7,8,9のいずれかで構成されているかを調べる）
-
-	// データが+，-のみでないかを調べる
+	// コマンドライン引数をチェックする
+	check_arg(argc, argv + 1);
 	// 個々のコマンドライン引数に格納されている値をリストに代入する
+	// get_data_from_argv(argv, data);
 }
