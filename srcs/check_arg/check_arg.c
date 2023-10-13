@@ -12,16 +12,9 @@
 
 #include "../../inc/check_arg.h"
 
-// データ（数値）に重複がないかをチェックする
-void	check_is_arg_duplicate(char **argv)
-{
-	;
-}
-
 void	check_arg(int argc, char **argv)
 {
 	check_is_arg_exist(argc);
 	check_is_arg_digit(argv);
 	check_is_arg_int(argv);
-	check_is_arg_duplicate(argv);
 }
