@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 18:04:53 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 18:50:01 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,63 +81,76 @@ int	ft_nodesize(t_node *node)
 	return (count);
 }
 
-t_node	*get_node_from_argv(char **argv)
+t_node	*get_node(char **content)
 {
 	t_node	*current;
 	int		arg_i;
 
 	arg_i = 1;
-	while (argv[arg_i])
+	if (content == NULL)
+		return (NULL);
+	while (content[arg_i])
 	{
 		if (arg_i == 1)
-			current = ft_nodenew(ft_atoi(argv[arg_i]));
+			current = ft_nodenew(ft_atoi(content[arg_i]));
 		else
-			ft_nodeadd_back(&current, ft_nodenew(ft_atoi(argv[arg_i])));
+			ft_nodeadd_back(&current, ft_nodenew(ft_atoi(content[arg_i])));
 		check_malloc(current);
 		arg_i++;
 	}
 	return (current);
 }
 
-void	put_node(t_node *current)
+void	put_stack(t_stack stack)
 {
-	while (current)
+	ft_printf("\n---stack---\n");
+	while (stack.head)
 	{
-		ft_printf(">> %d\n", current->content);
-		current = current->next;
+		ft_printf(">> %d\n", stack.head->content);
+		stack.head = stack.head->next;
 	}
+	ft_printf("size:\t%d\n", stack.size);
+	ft_printf("-----------\n\n");
 }
 
 // ノードは唯一のものであるか（重複がないか）チェックする
-void check_is_node_unique(t_node *test)
+void	check_is_node_unique(t_node *node)
 {
-	int target;
-	t_node *current;
+	int		target;
+	t_node	*current;
 
-	current = test;
+	current = node;
 	while (current)
 	{
-		target = test->content;
-		while (test->next)
+		target = node->content;
+		while (node->next)
 		{
-			test = test->next;
-			if (target == test->content)
+			node = node->next;
+			if (target == node->content)
 				exit_with_error();
 		}
 		current = current->next;
-		test = current;
+		node = current;
 	}
+}
+
+t_stack	get_stack(char **content)
+{
+	t_stack	stack;
+
+	stack.head = get_node(content);
+	stack.size = ft_nodesize(stack.head);
+	check_is_node_unique(stack.head);
+	return (stack);
 }
 
 t_data	get_data(int argc, char **argv)
 {
 	t_data	data;
 
-	data.stack_a.head = get_node_from_argv(argv);
-	data.stack_a.size = ft_nodesize(data.stack_a.head);
-	data.stack_b.head = NULL;
-	data.stack_b.size = ft_nodesize(data.stack_b.head);
-	put_node(data.stack_a.head);
-	check_is_node_unique(data.stack_a.head);
+	data.stack_a = get_stack(argv);
+	data.stack_b = get_stack(NULL);
+	put_stack(data.stack_a);
+	put_stack(data.stack_b);
 	return (data);
 }
