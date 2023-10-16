@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 16:59:26 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 17:08:51 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	ft_nodesize(t_node *node)
 	return (count);
 }
 
-t_node	*get_stack_from_argv(char **argv)
+t_node	*get_node_from_argv(char **argv)
 {
 	t_node	*current;
 	int		arg_i;
@@ -89,13 +89,11 @@ t_node	*get_stack_from_argv(char **argv)
 	arg_i = 1;
 	while (argv[arg_i])
 	{
-		// ft_printf("nb:\t%d\n", ft_atoi(argv[arg_i]));
 		if (arg_i == 1)
 			current = ft_nodenew(ft_atoi(argv[arg_i]));
 		else
 			ft_nodeadd_back(&current, ft_nodenew(ft_atoi(argv[arg_i])));
 		check_malloc(current);
-		// ft_printf("f();\t%d\n", current->content);
 		arg_i++;
 	}
 	return (current);
@@ -118,7 +116,11 @@ t_data	get_data(int argc, char **argv)
 	t_data	data;
 
 	// 個々のコマンドライン引数に格納されているint型整数値をリストに格納する
-	data.stack_a.head = get_stack_from_argv(argv);
+	data.stack_a.head = get_node_from_argv(argv);
+	data.stack_b.head = NULL;
+
+	data.stack_a.size = ft_nodesize(data.stack_a.head);
+	data.stack_b.size = ft_nodesize(data.stack_b.head);
 	put_node(data.stack_a.head);
 	// check_is_data_unique(data);
 	return (data);
