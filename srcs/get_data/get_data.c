@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 17:40:59 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 18:04:53 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,16 +115,14 @@ void check_is_node_unique(t_node *test)
 	t_node *current;
 
 	current = test;
-	// 一つ一つノードの要素を見ていく
 	while (current)
 	{
 		target = test->content;
-		while (test)
+		while (test->next)
 		{
 			test = test->next;
-			// ノードに重複があれば，エラー終了する．
 			if (target == test->content)
-				ft_printf("重複!\n");
+				exit_with_error();
 		}
 		current = current->next;
 		test = current;
@@ -135,13 +133,11 @@ t_data	get_data(int argc, char **argv)
 {
 	t_data	data;
 
-	// 個々のコマンドライン引数に格納されているint型整数値をリストに格納する
 	data.stack_a.head = get_node_from_argv(argv);
 	data.stack_a.size = ft_nodesize(data.stack_a.head);
 	data.stack_b.head = NULL;
 	data.stack_b.size = ft_nodesize(data.stack_b.head);
 	put_node(data.stack_a.head);
-	// ノードは唯一のものであるか（重複がないか）チェックする
 	check_is_node_unique(data.stack_a.head);
 	return (data);
 }
