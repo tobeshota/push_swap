@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 18:50:01 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 20:42:16 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,16 +101,24 @@ t_node	*get_node(char **content)
 	return (current);
 }
 
-void	put_stack(t_stack stack)
+void	put_data(t_data data)
 {
-	ft_printf("\n---stack---\n");
-	while (stack.head)
+	while (data.stack_a.head || data.stack_b.head)
 	{
-		ft_printf(">> %d\n", stack.head->content);
-		stack.head = stack.head->next;
+		if (data.stack_a.head)
+		{
+			ft_printf("%d", data.stack_a.head->content);
+			data.stack_a.head = data.stack_a.head->next;
+		}
+		ft_printf("\t");
+		if (data.stack_b.head)
+		{
+			ft_printf("%d", data.stack_b.head->content);
+			data.stack_b.head = data.stack_b.head->next;
+		}
+		ft_printf("\n");
 	}
-	ft_printf("size:\t%d\n", stack.size);
-	ft_printf("-----------\n\n");
+	ft_printf("-\t-\na(%d)\tb(%d)\n", data.stack_a.size, data.stack_b.size);
 }
 
 // ノードは唯一のものであるか（重複がないか）チェックする
@@ -150,7 +158,6 @@ t_data	get_data(int argc, char **argv)
 
 	data.stack_a = get_stack(argv);
 	data.stack_b = get_stack(NULL);
-	put_stack(data.stack_a);
-	put_stack(data.stack_b);
+put_data(data);
 	return (data);
 }
