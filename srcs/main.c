@@ -6,21 +6,24 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/13 21:09:29 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 16:59:22 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+
 int	main(int argc, char **argv)
 {
 	t_data	data;
+// argv = ft_split("./push_swap 2 4 6", ' ');
+// argc = 4;
 
 	//	ソート対象となるデータが適切であるかをチェックする
 	check_arg(argc, argv);
 
 	//	ソート対象となるデータを取得する
-	get_data(argc, argv, &data);
+	data = get_data(argc, argv);
 
 	//	データをソートする
 	sort_data(&data);

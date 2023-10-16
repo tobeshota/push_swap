@@ -6,12 +6,12 @@
 #    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/10/13 17:37:43 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/14 09:59:26 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
-CC			=	cc
+CC			=	cc -g
 # CFLAGS		=	-Wall -Wextra -Werror
 AR			=	ar rc
 RM			=	rm -f

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:00:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/13 14:46:15 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 16:35:07 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,16 @@
 
 # include "../libft/inc/libft.h"
 
+typedef struct s_node
+{
+	int				content;
+	struct s_node	*next;
+	struct s_node	*prev;
+}					t_node;
+
 typedef struct s_stack
 {
-	t_list	*head;
+	t_node	*head;
 	//	要素数．データ全体を分割するときや，最後のノードはどこかを参照するときに使う
 	int		size;
 }			t_stack;
