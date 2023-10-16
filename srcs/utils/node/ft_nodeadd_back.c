@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   ft_nodeadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 17:07:47 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 20:47:21 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/16 20:47:41 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/16 20:49:30 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "../../../inc/utils.h"
 
-# include "../libft/inc/libft.h"
-# include "define.h"
+void	ft_nodeadd_back(t_node **node, t_node *new)
+{
+	t_node	*node_last;
 
-void	exit_with_error(void);
-void	check_malloc(void *ptr);
-void	put_data(t_data data);
-
-// node
-t_node	*ft_nodenew(int content);
-t_node	*ft_nodelast(t_node *node);
-t_node	*ft_nodefirst(t_node *node);
-void	ft_nodeadd_back(t_node **node, t_node *new);
-int		ft_nodesize(t_node *node);
-
-#endif
+	if (node == NULL || new == NULL)
+		return ;
+	if (*node == NULL)
+	{
+		*node = new;
+		new->prev = *node;
+		return ;
+	}
+	node_last = ft_nodelast(*node);
+	new->prev = node_last;
+	node_last->next = new;
+}

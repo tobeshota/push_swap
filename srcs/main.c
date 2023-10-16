@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 18:03:26 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 20:58:04 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	main(int argc, char **argv)
 {
 	t_data	data;
-// argv = ft_split("./push_swap 2 4 6 8 10 4", ' ');
+// argv = ft_split("./push_swap 2 1 3 6 5 8", ' ');
 // argc = 7;
 
 	//	ソート対象となるデータが適切であるかをチェックする
@@ -24,6 +24,8 @@ int	main(int argc, char **argv)
 
 	//	ソート対象となるデータを取得する
 	data = get_data(argc, argv);
+
+put_data(data);
 
 	//	データをソートする
 	sort_data(&data);
