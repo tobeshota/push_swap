@@ -6,29 +6,31 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 20:58:04 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 22:59:07 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-
+/*
+./push_swap 2 1 3 6 5 8
+*/
 int	main(int argc, char **argv)
 {
 	t_data	data;
+
 // argv = ft_split("./push_swap 2 1 3 6 5 8", ' ');
 // argc = 7;
-
-	//	ソート対象となるデータが適切であるかをチェックする
 	check_arg(argc, argv);
-
-	//	ソート対象となるデータを取得する
-	data = get_data(argc, argv);
-
+	data = get_data(argv);
 put_data(data);
-
-	//	データをソートする
 	sort_data(&data);
+	free_data(&data);
+// all_free_tab(argv);
+}
+
+__attribute__((destructor)) static void destructor()
+{
+	system("leaks -q push_swap");
 }
 
 /* push_swap やることリスト

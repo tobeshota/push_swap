@@ -6,11 +6,26 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 20:44:41 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/16 22:45:15 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/utils.h"
+
+void	all_free_tab(char **ptr)
+{
+	int	i;
+
+	i = 0;
+	while (ptr[i])
+	{
+		free(ptr[i]);
+		ptr[i] = NULL;
+		i++;
+	}
+	free(ptr);
+	ptr = NULL;
+}
 
 void exit_with_error(void)
 {
@@ -41,5 +56,5 @@ void	put_data(t_data data)
 		}
 		ft_printf("\n");
 	}
-	ft_printf("-\t-\na(%d)\tb(%d)\n", data.stack_a.size, data.stack_b.size);
+	ft_printf("\n-\t-\na(%d)\tb(%d)\n", data.stack_a.size, data.stack_b.size);
 }
