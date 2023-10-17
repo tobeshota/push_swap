@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 22:50:31 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 23:04:04 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 t_node	*get_node(char **content)
 {
-	t_node	*current;
+	t_node	*node;
+	t_node	*new;
 	int		arg_i;
 
 	arg_i = 1;
@@ -22,14 +23,15 @@ t_node	*get_node(char **content)
 		return (NULL);
 	while (content[arg_i])
 	{
+		new = ft_nodenew(ft_atoi(content[arg_i]));
+		check_malloc(new);
 		if (arg_i == 1)
-			current = ft_nodenew(ft_atoi(content[arg_i]));
+			node = new;
 		else
-			ft_nodeadd_back(&current, ft_nodenew(ft_atoi(content[arg_i])));
-		check_malloc(current);
+			ft_nodeadd_back(&node, new);
 		arg_i++;
 	}
-	return (current);
+	return (node);
 }
 
 void	check_is_node_unique(t_node *node)
