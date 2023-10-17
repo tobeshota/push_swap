@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/17 18:21:18 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 21:11:06 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	all_free_tab(char **ptr)
 	ptr = NULL;
 }
 
-void exit_with_error(void)
+void	exit_with_error(void)
 {
 	write(STDERR_FILENO, "error\n", 7);
 	exit(2);
@@ -43,7 +43,6 @@ void	put_data(t_data data)
 {
 	data.stack_a.size = ft_nodesize(data.stack_a.head);
 	data.stack_b.size = ft_nodesize(data.stack_b.head);
-
 	while (data.stack_a.head || data.stack_b.head)
 	{
 		if (data.stack_a.head)

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:06:30 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 22:49:27 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 21:11:45 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 # include "define.h"
 # include "utils.h"
 
-void free_data(t_data *data);
+void	free_data(t_data *data);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:00:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 16:35:07 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 21:11:40 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,15 @@ typedef struct s_node
 
 typedef struct s_stack
 {
-	t_node	*head;
-	//	要素数．データ全体を分割するときや，最後のノードはどこかを参照するときに使う
-	int		size;
-}			t_stack;
+	t_node			*head;
+	int				size;
+}					t_stack;
 
 typedef struct s_data
 {
-	t_stack	stack_a;
-	t_stack	stack_b;
-}			t_data;
+	t_stack			stack_a;
+	t_stack			stack_b;
+}					t_data;
 
 # define TRUE 1
 # define FALSE 0

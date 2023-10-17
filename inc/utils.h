@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:07:47 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/17 20:41:14 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 21:06:38 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void	ft_nodeclear(t_node *node);
 void	ft_nodedelone(t_node *node);
 void	ft_nodeadd_front(t_node **node, t_node *new);
 void	del_beginning_node(t_node **node);
+void	del_end_node(t_node **node);
 
 #endif

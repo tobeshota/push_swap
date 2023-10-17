@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECK_DATA_H
-# define CHECK_DATA_H
+#ifndef CHECK_ARG_H
+# define CHECK_ARG_H
 
 # include "define.h"
 # include "utils.h"
