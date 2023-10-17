@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/17 17:28:38 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 20:47:24 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	sort_data(t_data *data)
 {
+	sa(data);
 	pb(data);
+	pb(data);
+	pb(data);
+	ra(data);
+	rb(data);
 }

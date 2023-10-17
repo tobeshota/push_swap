@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/17 14:52:05 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 18:21:18 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ void	check_malloc(void *ptr)
 
 void	put_data(t_data data)
 {
+	data.stack_a.size = ft_nodesize(data.stack_a.head);
+	data.stack_b.size = ft_nodesize(data.stack_b.head);
+
 	while (data.stack_a.head || data.stack_b.head)
 	{
 		if (data.stack_a.head)
