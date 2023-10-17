@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/17 20:42:27 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 21:20:17 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 static void	copy_beginning_of_b_to_a(t_data *data)
 {
-	ft_nodeadd_front(&data->stack_a.head,
-		ft_nodenew(data->stack_b.head->content));
+	t_node	*new;
+
+	new = ft_nodenew(data->stack_b.head->content);
+	check_malloc(new);
+	ft_nodeadd_front(&data->stack_a.head, new);
 }
 
 void	pa(t_data *data)
