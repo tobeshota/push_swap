@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   sort_data.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/10 17:20:31 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 14:07:39 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SORT_DATA_H
 # define SORT_DATA_H
 
-#include "define.h"
+# include "define.h"
+# include "utils.h"
 
 void	sort_data(t_data *data);
 

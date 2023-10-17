@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:47:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 20:47:51 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 16:12:11 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 t_node	*ft_nodenew(int content)
 {
-	t_node	*newlst;
+	t_node	*newnode;
 
-	newlst = (t_node *)malloc(sizeof(t_node));
-	if (newlst == NULL)
+	newnode = (t_node *)malloc(sizeof(t_node));
+	if (newnode == NULL)
 		return (NULL);
-	newlst->content = content;
-	newlst->next = NULL;
-	newlst->prev = NULL;
-	return (newlst);
+	newnode->content = content;
+	newnode->next = NULL;
+	newnode->prev = NULL;
+	return (newnode);
 }

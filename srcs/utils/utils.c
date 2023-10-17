@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 22:45:15 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 14:52:05 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,5 @@ void	put_data(t_data data)
 		}
 		ft_printf("\n");
 	}
-	ft_printf("\n-\t-\na(%d)\tb(%d)\n", data.stack_a.size, data.stack_b.size);
+	ft_printf("\n-\t-\na(%d)\tb(%d)\n\n", data.stack_a.size, data.stack_b.size);
 }

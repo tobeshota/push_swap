@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:07:47 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/16 22:48:00 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/17 14:22:01 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	ft_nodeadd_back(t_node **node, t_node *new);
 int		ft_nodesize(t_node *node);
 void	ft_nodeclear(t_node *node);
 void	ft_nodedelone(t_node *node);
+void	ft_nodeadd_front(t_node **node, t_node *new);
 
 #endif
