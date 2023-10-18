@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/17 21:23:29 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/18 14:16:07 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 void	rra(t_data *data)
 {
-	t_node	*new;
-
 	if (ft_nodesize(data->stack_a.head) < 2)
 		return ;
-	new = ft_nodenew(ft_nodelast(data->stack_a.head)->content);
-	check_malloc(new);
-	ft_nodeadd_front(&data->stack_a.head, new);
+	add_last_node_to_first_node(&data->stack_a.head);
 	del_end_node(&data->stack_a.head);
 	ft_printf("rra\n");
 }

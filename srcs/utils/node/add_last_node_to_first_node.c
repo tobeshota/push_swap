@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   add_last_node_to_first_node.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/18 14:11:10 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/18 14:13:38 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/18 14:13:45 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/sort_data.h"
+#include "../../../inc/utils.h"
 
-void	ra(t_data *data)
+void	add_last_node_to_first_node(t_node **node)
 {
-	if (ft_nodesize(data->stack_a.head) < 2)
-		return ;
-	add_first_node_to_last_node(&data->stack_a.head);
-	del_beginning_node(&data->stack_a.head);
-	ft_printf("ra\n");
+	t_node	*new;
+
+	new = ft_nodenew(ft_nodelast(*node)->content);
+	check_malloc(new);
+	ft_nodeadd_front(node, new);
 }
