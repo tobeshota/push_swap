@@ -15,5 +15,5 @@
 void	check_is_arg_exist(int argc)
 {
 	if (argc == 1)
-		exit_with_error();
+		exit(0);
 }
