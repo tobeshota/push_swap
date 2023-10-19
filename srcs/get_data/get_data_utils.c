@@ -6,13 +6,13 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/19 12:54:41 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/19 17:46:35 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/get_data.h"
 
-t_node	*get_node(char **content)
+static t_node	*get_node(char **content)
 {
 	t_node	*node;
 	t_node	*new;
@@ -34,7 +34,28 @@ t_node	*get_node(char **content)
 	return (node);
 }
 
-void	check_is_node_unique(t_node *node)
+static void	check_is_node_already_sorted(t_node *node)
+{
+	if (ft_nodesize(node) == 0 || ft_nodesize(node) == 1)
+		return ;
+	if (ft_nodesize(node) == 2)
+	{
+		if (node->content < node->next->content)
+			exit(0);
+	}
+	else
+	{
+		while (node->next)
+		{
+			if (node->content > node->next->content)
+				return ;
+			node = node->next;
+		}
+		exit(0);
+	}
+}
+
+static void	check_is_node_unique(t_node *node)
 {
 	int		target;
 	t_node	*current;
@@ -61,5 +82,6 @@ t_stack	get_stack(char **content)
 	stack.head = get_node(content);
 	stack.size = ft_nodesize(stack.head);
 	check_is_node_unique(stack.head);
+	check_is_node_already_sorted(stack.head);
 	return (stack);
 }

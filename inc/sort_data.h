@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/19 17:04:36 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/19 17:29:41 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 void	sort_data(t_data *data);
 
 // sort_algorithm
-void	bubble_sort_a(t_data *data);
-int		is_stack_sorted(t_stack stack);
 void	sort_2_nodes(t_data *data);
 void	sort_3_nodes(t_data *data);
 
