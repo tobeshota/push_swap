@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nodefirst.c                                     :+:      :+:    :+:   */
+/*   sort_2_nodes.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 20:47:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/19 14:19:45 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/19 14:56:32 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/19 15:00:11 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/utils.h"
+#include "../../../../inc/sort_data.h"
 
-void	ft_nodefirst(t_node *node)
+void	sort_2_nodes(t_data *data)
 {
-	if (node == NULL)
-		return ;
-	while (node != NULL)
-		node = node->prev;
+	if (data->stack_a.head->content > data->stack_a.head->next->content)
+		sa(data);
 }

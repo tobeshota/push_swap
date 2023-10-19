@@ -6,37 +6,26 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/19 11:49:03 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/19 15:53:28 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/sort_data.h"
 
-void	sort_2_nodes(t_data *data)
-{
-	if (data->stack_a.head->content > data->stack_a.head->next->content)
-		sa(data);
-}
-
-// void	sort_3_nodes(t_data *data)
-// {
-// 	;
-// }
-
 // 基数ソートする
 void	sort_data(t_data *data)
 {
-	ft_printf(">> %d\n", data->stack_a.size);
 	if (data->stack_a.size == 1)
-		return;
+		return ;
 	if (data->stack_a.size == 2)
 		sort_2_nodes(data);
-	// if (data->stack_a.size == 3)
-	// 	sort_3_nodes(data);
+	if (data->stack_a.size == 3)
+		sort_3_nodes(data);
+	else
+		bubble_sort_a(data);
 	// if (data->stack_a.size == 4)
 	// 	sort_3_nodes(data);
 }
-
 
 /* 基数ソートする
 

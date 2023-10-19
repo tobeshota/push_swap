@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nodefirst.c                                     :+:      :+:    :+:   */
+/*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 20:47:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/19 14:19:45 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/19 14:56:32 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/19 15:02:53 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/utils.h"
+#include "../../../inc/sort_data.h"
 
-void	ft_nodefirst(t_node *node)
+int	is_stack_sorted(t_stack stack)
 {
-	if (node == NULL)
-		return ;
-	while (node != NULL)
-		node = node->prev;
+	while (stack.head->next)
+	{
+		if (stack.head->content > stack.head->next->content)
+			return (FALSE);
+		stack.head = stack.head->next;
+	}
+	return (TRUE);
 }

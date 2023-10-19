@@ -9,3 +9,7 @@ push_swap
 # object, archive files
 *.o
 *.a
+
+# test
+checker_Mac
+pain/

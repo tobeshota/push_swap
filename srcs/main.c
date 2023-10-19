@@ -6,33 +6,34 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/18 17:20:00 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/19 17:10:14 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 /*
 ./push_swap 2 1 3 6 5 8
+ARG="3 2 1"; ./push_swap $ARG | ./checker_Mac $ARG
 */
 int	main(int argc, char **argv)
 {
 	t_data	data;
 
-// argv = ft_split("./push_swap 2 1 3 6 5 8", ' ');
-// argc = 7;
+// argv = ft_split("./push_swap 12 22 3 14 19 25 9 24 21 31 5 6 8 29 30 11 16 32 15 7 17 28 13 18 26 10 4 23 2 1 27 20", ' ');
+// argc = 6;
 	check_arg(argc, argv);
 	data = get_data(argv);
 
 	sort_data(&data);
-put_data(data);
+// put_data(data);
 	free_data(&data);
 // all_free_tab(argv);
 }
 
-__attribute__((destructor)) static void destructor()
-{
-	system("leaks -q push_swap");
-}
+// __attribute__((destructor)) static void destructor()
+// {
+// 	system("leaks -q push_swap");
+// }
 
 /* push_swap やることリスト
 
