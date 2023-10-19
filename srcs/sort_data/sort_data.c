@@ -6,25 +6,58 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/18 17:25:56 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/19 11:49:03 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/sort_data.h"
 
+void	sort_2_nodes(t_data *data)
+{
+	if (data->stack_a.head->content > data->stack_a.head->next->content)
+		sa(data);
+}
+
+// void	sort_3_nodes(t_data *data)
+// {
+// 	;
+// }
+
 // 基数ソートする
 void	sort_data(t_data *data)
 {
-	// 値を二進数変換する
-	// 値（二進数）の最大桁数を取得する
-	// 見る桁数が最大桁数になるまで繰り返す
-	// 値（二進数）を1桁ずつみていく
+	ft_printf(">> %d\n", data->stack_a.size);
+	if (data->stack_a.size == 1)
+		return;
+	if (data->stack_a.size == 2)
+		sort_2_nodes(data);
+	// if (data->stack_a.size == 3)
+	// 	sort_3_nodes(data);
+	// if (data->stack_a.size == 4)
+	// 	sort_3_nodes(data);
+}
+
+
+/* 基数ソートする
+
+	値を二進数変換する
+	値（二進数）の最大桁数を取得する
+	見る桁数が最大桁数になるまで繰り返す
+	値（二進数）を1桁ずつみていく
 	{
 		// いまみている桁で値をバブルソートする
 	}
-}
+*/
 
-/* クイックソートする
+/* クイックソートする：グループごとに分割して，グループごとにソートしていく
+
+1．pivotを選択する（適当な値をピボットして選択する）
+2．pivot未満の要素をスタックbに入れる
+スタックbが整列済みになるまで再起的に1と2を繰り返す
+
+
+
+
 
 基準値（pivot）を決める（基準値：中央値）
 
