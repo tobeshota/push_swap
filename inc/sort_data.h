@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_data.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 17:32:06 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 20:37:46 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 # define SORT_DATA_H
 
 # include "define.h"
-# include "utils.h"
 # include "get_data.h"
+# include "utils.h"
 
 void	sort_data(t_data *data);
 
 // sort_utils
-int		get_content_in_order(t_node *node, int order);
+long	get_content_in_order(t_node *node, int order);
 void	ra_until_order(t_data *data, int order_1, int order_2, int order_3);
 
 // sort_algorithm
 void	sort_2_nodes_a(t_data *data);
 void	sort_2_nodes_b(t_data *data);
+void	sort_2_nodes_a_in_descending(t_data *data);
+void	sort_2_nodes_b_in_descending(t_data *data);
 
 void	sort_3_nodes_a(t_data *data);
 void	sort_3_nodes_b(t_data *data);
