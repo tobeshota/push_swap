@@ -6,13 +6,13 @@
 #    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/10/21 00:02:58 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/21 00:45:45 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
 CC			=	cc -g
-# CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror
 AR			=	ar rc
 RM			=	rm -rf
 LIBFT_DIR	=	libft/

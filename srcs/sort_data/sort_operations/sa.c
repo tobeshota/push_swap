@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 20:59:39 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:46:26 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ static void	sa_order(t_data *data)
 
 void	sa(t_data *data)
 {
-	int	tmp;
-
 	if (ft_nodesize(data->stack_a.head) < 2)
 		return ;
 	sa_content(data);

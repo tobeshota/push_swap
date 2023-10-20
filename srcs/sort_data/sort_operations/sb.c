@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 23:43:46 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:46:22 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ static void	sb_order(t_data *data)
 
 void	sb(t_data *data)
 {
-	int	tmp;
-
 	if (ft_nodesize(data->stack_b.head) < 2)
 		return ;
 	sb_content(data);
