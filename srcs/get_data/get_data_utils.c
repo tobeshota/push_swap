@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 16:02:44 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 17:22:36 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,13 +75,14 @@ static void	check_is_node_unique(t_node *node)
 	}
 }
 
-static void	get_order(t_node *node)
+void	get_order(t_node *node)
 {
 	t_node	*test;
 
 	test = node;
 	while (node)
 	{
+		node->order = 1;
 		while (test->next)
 		{
 			if (node->content > test->content)

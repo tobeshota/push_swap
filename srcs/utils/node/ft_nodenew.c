@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:47:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 15:30:27 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 17:11:28 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ t_node	*ft_nodenew(int content)
 	newnode->content = content;
 	newnode->next = NULL;
 	newnode->prev = NULL;
-	newnode->order = 0;
+	newnode->order = 1;
 	return (newnode);
 }

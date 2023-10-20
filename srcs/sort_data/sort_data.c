@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 15:30:59 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 17:35:53 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,17 @@ void	sort_data(t_data *data)
 	if (data->stack_a.size == 1)
 		return ;
 	else if (data->stack_a.size == 2)
-		sort_2_nodes(data);
+		sort_2_nodes_a(data);
 	else if (data->stack_a.size == 3)
-		sort_3_nodes(data);
+		sort_3_nodes_a(data);
+	else if (data->stack_a.size == 4)
+		sort_4_nodes(data);
+	else if (data->stack_a.size == 5)
+		sort_5_nodes(data);
 	else
 		radix_sort(data);
 	// if (data->stack_a.size == 4)
-	// 	sort_3_nodes(data);
+	// 	sort_3_nodes_a(data);
 }
 
 /* 基数ソートする

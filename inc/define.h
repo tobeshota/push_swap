@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:00:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 15:16:59 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 17:33:23 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ typedef struct s_data
 
 # define TRUE 1
 # define FALSE 0
+
+#define NOT_SPECIFIEF_ORDER -1
 
 #endif

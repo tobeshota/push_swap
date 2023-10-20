@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 16:03:58 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 17:34:50 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ int	main(int argc, char **argv)
 {
 	t_data	data;
 
-// argv = ft_split("./push_swap 2 1 3 6 5 8", ' ');
-// argc = 5;
+argv = ft_split("./push_swap 2 6 4 10 8", ' ');
+argc = 5;
 
 	check_arg(argc, argv);
-
 	data = get_data(argv);
+put_data(data);
 	sort_data(&data);
 put_data(data);
 	free_data(&data);
-// all_free_tab(argv);
+all_free_tab(argv);
 }
 
 // __attribute__((destructor)) static void destructor()

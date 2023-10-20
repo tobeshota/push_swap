@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 14:34:09 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 17:32:06 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,23 @@
 
 # include "define.h"
 # include "utils.h"
+# include "get_data.h"
 
 void	sort_data(t_data *data);
 
+// sort_utils
+int		get_content_in_order(t_node *node, int order);
+void	ra_until_order(t_data *data, int order_1, int order_2, int order_3);
+
 // sort_algorithm
-void	sort_2_nodes(t_data *data);
-void	sort_3_nodes(t_data *data);
-void get_order(t_node *node);
+void	sort_2_nodes_a(t_data *data);
+void	sort_2_nodes_b(t_data *data);
+
+void	sort_3_nodes_a(t_data *data);
+void	sort_3_nodes_b(t_data *data);
+
+void	sort_4_nodes(t_data *data);
+void	sort_5_nodes(t_data *data);
 
 // sort_operations
 void	sa(t_data *data);
