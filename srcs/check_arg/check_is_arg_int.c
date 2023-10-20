@@ -51,10 +51,6 @@ static int	check_is_num_in_int(char *argv)
 	return (ft_atoi(argv) == ft_atol(argv));
 }
 
-/* コマンドライン引数がint型であるかをチェックする
- * 数字の桁数がint型の範囲かを調べる（これで残るのはint型とlong型のみ）
- * 数字をint型に変換したものとlong型に変換したものが等しいかを調べる（これで残るにはint型のみ）
- */
 void	check_is_arg_int(char **argv)
 {
 	int	arg_i;

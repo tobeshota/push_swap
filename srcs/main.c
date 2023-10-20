@@ -6,20 +6,20 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 23:44:50 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:42:43 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 /*
 ./push_swap 2 1 3 6 5 8
-ARG="6 4 3 2 1 5"; ./push_swap $ARG | ./checker_Mac $ARG
+ARG="4 3 1 2 6 5"; ./push_swap $ARG | ./checker_Mac $ARG
 */
 int	main(int argc, char **argv)
 {
 	t_data	data;
 
-// argv = ft_split("./push_swap 6 5 3 4 2 1", ' ');
+// argv = ft_split("./push_swap 4 3 1 2 6 5", ' ');
 // argc = 7;
 
 	check_arg(argc, argv);

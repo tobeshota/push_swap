@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 21:11:29 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:29:29 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	check_malloc(void *ptr)
 
 void	put_node(t_node *node)
 {
-	while(node)
+	while (node)
 	{
 		ft_printf("%d ", node->content);
 		node = node->next;
@@ -59,13 +59,15 @@ void	put_data(t_data data)
 	{
 		if (data.stack_a.head)
 		{
-			ft_printf("%d[%d]", data.stack_a.head->content, data.stack_a.head->order);
+			ft_printf("%d[%d]", data.stack_a.head->content,
+				data.stack_a.head->order);
 			data.stack_a.head = data.stack_a.head->next;
 		}
 		ft_printf("\t");
 		if (data.stack_b.head)
 		{
-			ft_printf("%d[%d]", data.stack_b.head->content, data.stack_b.head->order);
+			ft_printf("%d[%d]", data.stack_b.head->content,
+				data.stack_b.head->order);
 			data.stack_b.head = data.stack_b.head->next;
 		}
 		ft_printf("\n");

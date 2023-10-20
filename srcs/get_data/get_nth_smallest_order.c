@@ -6,18 +6,18 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 21:06:34 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 21:06:42 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:29:14 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/get_data.h"
 
-static void store_order_in_array(int *order_array, t_node *node)
+static void	store_order_in_array(int *order_array, t_node *node)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(node)
+	while (node)
 	{
 		order_array[i] = node->order;
 		ft_nodenext(&node);

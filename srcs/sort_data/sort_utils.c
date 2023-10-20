@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:33:35 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 21:05:47 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 00:29:51 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,14 @@ void	ra_until_order(t_data *data, int order_1, int order_2, int order_3)
 	content_1 = get_content_in_order(data->stack_a.head, order_1);
 	content_2 = get_content_in_order(data->stack_a.head, order_2);
 	content_3 = get_content_in_order(data->stack_a.head, order_3);
-	while (data->stack_a.head->content != content_1 & data->stack_a.head->content != content_2
+	while (data->stack_a.head->content != content_1 \
+		& data->stack_a.head->content != content_2
 		&& data->stack_a.head->content != content_3)
 		ra(data);
+}
+
+void	push_tail_a(t_data *data)
+{
+	pa(data);
+	ra(data);
 }
