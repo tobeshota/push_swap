@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 21:01:48 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 21:09:11 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	main(int argc, char **argv)
 
 	check_arg(argc, argv);
 	data = get_data(argv);
-put_data(data);
 	sort_data(&data);
 put_data(data);
 	free_data(&data);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 16:33:34 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 21:11:29 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	put_data(t_data data)
 {
 	data.stack_a.size = ft_nodesize(data.stack_a.head);
 	data.stack_b.size = ft_nodesize(data.stack_b.head);
+	ft_printf("\n-\t-\n");
 	while (data.stack_a.head || data.stack_b.head)
 	{
 		if (data.stack_a.head)
@@ -69,5 +70,5 @@ void	put_data(t_data data)
 		}
 		ft_printf("\n");
 	}
-	ft_printf("\n-\t-\na(%d)\tb(%d)\n\n", data.stack_a.size, data.stack_b.size);
+	ft_printf("-\t-\na(%d)\tb(%d)\n\n", data.stack_a.size, data.stack_b.size);
 }

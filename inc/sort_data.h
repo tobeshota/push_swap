@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 20:37:46 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 21:04:08 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	sort_data(t_data *data);
 
 // sort_utils
 long	get_content_in_order(t_node *node, int order);
+int		get_nth_smallest_order(t_node *node, int nth);
 void	ra_until_order(t_data *data, int order_1, int order_2, int order_3);
 
 // sort_algorithm

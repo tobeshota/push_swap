@@ -42,15 +42,12 @@ static void	sort_3_nodes_by_cases(t_data *data, int large, int mid, int small)
 
 void	sort_3_nodes_b(t_data *data)
 {
-	int	large;
-	int	mid;
-	int	small;
-	int size;
+	long 	large;
+	long	mid;
+	long	small;
 
-	get_order(data->stack_b.head);
-	size = ft_nodesize(data->stack_b.head);
-	large = get_content_in_order(data->stack_b.head, size);
-	mid = get_content_in_order(data->stack_b.head, size - 1);
-	small = get_content_in_order(data->stack_b.head, size - 2);
+	large = get_content_in_order(data->stack_b.head, get_nth_smallest_order(data->stack_b.head, 3));
+	mid = get_content_in_order(data->stack_b.head, get_nth_smallest_order(data->stack_b.head, 2));
+	small = get_content_in_order(data->stack_b.head, get_nth_smallest_order(data->stack_b.head, 1));
 	sort_3_nodes_by_cases(data, large, mid, small);
 }
