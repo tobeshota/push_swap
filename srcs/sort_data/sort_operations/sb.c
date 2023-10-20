@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 21:01:05 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 23:43:46 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void	sb(t_data *data)
 		return ;
 	sb_content(data);
 	sb_order(data);
-	ft_printf("sa\n");
+	ft_printf("sb\n");
 }

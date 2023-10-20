@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_data.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 17:35:53 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 23:08:52 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void	sort_data(t_data *data)
 		sort_4_nodes(data);
 	else if (data->stack_a.size == 5)
 		sort_5_nodes(data);
+	else if (data->stack_a.size == 6)
+		sort_6_nodes(data);
 	else
 		radix_sort(data);
 	// if (data->stack_a.size == 4)

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 21:16:25 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 23:06:03 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	sort_3_nodes_b_in_descending(t_data *data);
 
 void	sort_4_nodes(t_data *data);
 void	sort_5_nodes(t_data *data);
+void	sort_6_nodes(t_data *data);
 
 // sort_operations
 void	sa(t_data *data);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_data_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 17:22:36 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 23:29:29 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static void	check_is_node_unique(t_node *node)
 	}
 }
 
-void	get_order(t_node *node)
+static void	get_order(t_node *node)
 {
 	t_node	*test;
 
