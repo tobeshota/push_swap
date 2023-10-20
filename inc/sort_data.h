@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_data.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/19 17:29:41 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 14:34:09 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	sort_data(t_data *data);
 // sort_algorithm
 void	sort_2_nodes(t_data *data);
 void	sort_3_nodes(t_data *data);
+void get_order(t_node *node);
 
 // sort_operations
 void	sa(t_data *data);

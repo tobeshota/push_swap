@@ -3,26 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   sort_data.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/19 15:53:28 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 15:30:59 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/sort_data.h"
+
+// 基数ソートするpa pb
+void radix_sort(t_data *data)
+{
+	// 32回繰り返す
+	{
+		// aのうち，今見ている桁（二進数）が1であるものをすべてbに入れる pb
+		// bにある要素をすべてaに入れる
+		// 今見ている桁を次の桁にする
+	}
+	;
+}
 
 // 基数ソートする
 void	sort_data(t_data *data)
 {
 	if (data->stack_a.size == 1)
 		return ;
-	if (data->stack_a.size == 2)
+	else if (data->stack_a.size == 2)
 		sort_2_nodes(data);
-	if (data->stack_a.size == 3)
+	else if (data->stack_a.size == 3)
 		sort_3_nodes(data);
 	else
-		bubble_sort_a(data);
+		radix_sort(data);
 	// if (data->stack_a.size == 4)
 	// 	sort_3_nodes(data);
 }

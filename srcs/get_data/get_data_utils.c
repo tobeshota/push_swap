@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   get_data_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/19 17:46:35 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/20 16:02:44 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/get_data.h"
 
-static t_node	*get_node(char **content)
+static t_node	*get_node(char **argv)
 {
 	t_node	*node;
 	t_node	*new;
 	int		arg_i;
 
 	arg_i = 1;
-	if (content == NULL)
+	if (argv == NULL)
 		return (NULL);
-	while (content[arg_i])
+	while (argv[arg_i])
 	{
-		new = ft_nodenew(ft_atoi(content[arg_i]));
+		new = ft_nodenew(ft_atoi(argv[arg_i]));
 		check_malloc(new);
 		if (arg_i == 1)
 			node = new;
@@ -75,13 +75,34 @@ static void	check_is_node_unique(t_node *node)
 	}
 }
 
-t_stack	get_stack(char **content)
+static void	get_order(t_node *node)
+{
+	t_node	*test;
+
+	test = node;
+	while (node)
+	{
+		while (test->next)
+		{
+			if (node->content > test->content)
+				node->order++;
+			ft_nodenext(&test);
+		}
+		if (node->content > test->content)
+			node->order++;
+		ft_nodenext(&node);
+		ft_nodefirst(&test);
+	}
+}
+
+t_stack	get_stack(char **argv)
 {
 	t_stack	stack;
 
-	stack.head = get_node(content);
+	stack.head = get_node(argv);
 	stack.size = ft_nodesize(stack.head);
 	check_is_node_unique(stack.head);
 	check_is_node_already_sorted(stack.head);
+	get_order(stack.head);
 	return (stack);
 }
