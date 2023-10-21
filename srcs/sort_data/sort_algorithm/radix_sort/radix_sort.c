@@ -6,23 +6,61 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 23:59:22 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 11:20:31 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../../inc/sort_data.h"
 
-// 基数ソートするpa pb
-// c.f.https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
-void radix_sort(t_data *data)
+int	get_max_bits(t_node *node)
 {
-	// 32回繰り返す
+	int	max_content;
+	int	max_bits;
+
+	max_content = get_content_in_order(node, ft_nodesize(node));
+	max_bits = 0;
+	while (max_content >> max_bits)
+		max_bits++;
+	return (max_bits);
+}
+
+void	pa_all(t_data *data)
+{
+	while (data->stack_b.head)
+		pa(data);
+}
+
+int	is_ith_bit_1(int order, int bits_ith)
+{
+	return (((order >> bits_ith) & 1) == 1);
+}
+
+void	push_ith_bit_as_1_to_b(t_data *data, int bits_ith)
+{
+	int	size_i;
+
+	size_i = 0;
+	while (size_i < data->stack_a.size)
 	{
-		// aのうち，今見ている桁（二進数）が1であるものをすべてbに入れる pb
-		// bにある要素をすべてaに入れる
-		// 今見ている桁を次の桁にする
+		if (is_ith_bit_1(data->stack_a.head->order, bits_ith))
+			ra(data);
+		else
+			pb(data);
+		size_i++;
 	}
-put_data(*data);
+}
+
+void	radix_sort(t_data *data)
+{
+	int	bits_ith;
+
+	bits_ith = 0;
+	while (bits_ith <= get_max_bits(data->stack_a.head))
+	{
+		push_ith_bit_as_1_to_b(data, bits_ith);
+		pa_all(data);
+		bits_ith++;
+	}
 }
 
 /* 基数ソートする
