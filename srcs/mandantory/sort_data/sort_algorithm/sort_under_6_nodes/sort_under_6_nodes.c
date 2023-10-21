@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   sort_under_6_nodes.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:29:11 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/20 23:51:58 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/21 12:36:14 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "sort_data.h"
 
-# include "check_arg.h"
-# include "define.h"
-# include "free_data.h"
-# include "get_data.h"
-# include "sort_data.h"
-# include "utils.h"
-
-#endif
+void	sort_under_6_nodes(t_data *data)
+{
+	if (data->stack_a.size == 1)
+		return ;
+	else if (data->stack_a.size == 2)
+		sort_2_nodes_a(data);
+	else if (data->stack_a.size == 3)
+		sort_3_nodes_a(data);
+	else if (data->stack_a.size == 4)
+		sort_4_nodes(data);
+	else if (data->stack_a.size == 5)
+		sort_5_nodes(data);
+	else if (data->stack_a.size == 6)
+		sort_6_nodes(data);
+}

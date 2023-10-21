@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   check_is_arg_exist.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:29:11 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/13 15:41:52 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "check_arg.h"
 
-# include "check_arg.h"
-# include "define.h"
-# include "free_data.h"
-# include "get_data.h"
-# include "sort_data.h"
-# include "utils.h"
-
-#endif
+void	check_is_arg_exist(int argc)
+{
+	if (argc == 1)
+		exit(0);
+}

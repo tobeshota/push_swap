@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   is_node_sorted.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:29:11 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/20 11:12:16 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/21 12:30:17 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "utils.h"
 
-# include "check_arg.h"
-# include "define.h"
-# include "free_data.h"
-# include "get_data.h"
-# include "sort_data.h"
-# include "utils.h"
-
-#endif
+int	is_node_sorted(t_node *node)
+{
+	if (ft_nodesize(node) == 0 || ft_nodesize(node) == 1)
+		return (TRUE);
+	if (ft_nodesize(node) == 2)
+	{
+		if (node->content < node->next->content)
+			return (TRUE);
+	}
+	else
+	{
+		while (node->next)
+		{
+			if (node->content > node->next->content)
+				return (FALSE);
+			node = node->next;
+		}
+		return (TRUE);
+	}
+	return (FALSE);
+}

@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:07:47 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/20 11:40:37 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 12:32:52 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_H
 # define UTILS_H
 
-# include "../libft/inc/libft.h"
 # include "define.h"
 
 void	all_free_tab(char **ptr);

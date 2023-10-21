@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_nodeadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:29:11 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/16 20:47:41 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/21 12:30:17 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "utils.h"
 
-# include "check_arg.h"
-# include "define.h"
-# include "free_data.h"
-# include "get_data.h"
-# include "sort_data.h"
-# include "utils.h"
+void	ft_nodeadd_back(t_node **node, t_node *new)
+{
+	t_node	*node_last;
 
-#endif
+	if (node == NULL || new == NULL)
+		return ;
+	if (*node == NULL)
+	{
+		*node = new;
+		new->prev = *node;
+		return ;
+	}
+	node_last = ft_nodelast(*node);
+	new->prev = node_last;
+	node_last->next = new;
+}

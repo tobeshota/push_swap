@@ -6,7 +6,7 @@
 #    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/10/13 00:36:16 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/21 12:54:59 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		=	libftprintf.a
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 AR			=	ar rcs
-RM			=	rm -f
+RM			=	rm -rf
 SRCS_DIR	=	srcs/
 OBJS_DIR	=	objs/
 INC_DIR		=	../inc/
@@ -47,7 +47,7 @@ $(OBJS_DIR)%.o : $(SRCS_DIR)%.c
 	@ $(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
 
 clean:
-	@ $(RM) $(OBJS)
+	@ $(RM) $(OBJS_DIR)
 
 fclean:		clean
 	@ $(RM) $(NAME)

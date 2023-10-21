@@ -6,7 +6,7 @@
 #    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/10/21 00:45:45 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/21 13:03:15 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,9 @@ SRCS_DIR	=	srcs/
 INCS_DIR	=	inc/
 OBJS_DIR	=	objs/
 
-# echo srcs/*.c srcs/**/*.c srcs/**/**/*.c srcs/**/**/**/*.c | pbcopy
+# echo srcs/**/*.c srcs/**/**/*.c srcs/**/**/**/*.c srcs/**/**/**/**/*.c | pbcopy
 # echo srcs/**/*.c | pbcopy
-SRCS		=	srcs/main.c srcs/check_arg/check_arg.c srcs/check_arg/check_is_arg_digit.c srcs/check_arg/check_is_arg_exist.c srcs/check_arg/check_is_arg_int.c srcs/free_data/free_data.c srcs/get_data/get_data.c srcs/get_data/get_data_utils.c srcs/get_data/get_nth_smallest_order.c srcs/sort_data/sort_data.c srcs/sort_data/sort_utils.c srcs/utils/utils.c srcs/sort_data/sort_operations/pa.c srcs/sort_data/sort_operations/pb.c srcs/sort_data/sort_operations/ra.c srcs/sort_data/sort_operations/rb.c srcs/sort_data/sort_operations/rr.c srcs/sort_data/sort_operations/rra.c srcs/sort_data/sort_operations/rrb.c srcs/sort_data/sort_operations/rrr.c srcs/sort_data/sort_operations/sa.c srcs/sort_data/sort_operations/sb.c srcs/sort_data/sort_operations/ss.c srcs/utils/node/add_first_node_to_last_node.c srcs/utils/node/add_last_node_to_first_node.c srcs/utils/node/del_beginning_node.c srcs/utils/node/del_end_node.c srcs/utils/node/ft_nodeadd_back.c srcs/utils/node/ft_nodeadd_front.c srcs/utils/node/ft_nodeclear.c srcs/utils/node/ft_nodedelone.c srcs/utils/node/ft_nodefirst.c srcs/utils/node/ft_nodelast.c srcs/utils/node/ft_nodenew.c srcs/utils/node/ft_nodenext.c srcs/utils/node/ft_nodesize.c srcs/utils/node/is_node_sorted.c srcs/sort_data/sort_algorithm/radix_sort/radix_sort.c srcs/sort_data/sort_algorithm/sort_under_6_nodes/sort_2_nodes.c srcs/sort_data/sort_algorithm/sort_under_6_nodes/sort_2_nodes_in_descending.c srcs/sort_data/sort_algorithm/sort_under_6_nodes/sort_3_nodes.c srcs/sort_data/sort_algorithm/sort_under_6_nodes/sort_3_nodes_in_descending.c srcs/sort_data/sort_algorithm/sort_under_6_nodes/sort_4_nodes.c srcs/sort_data/sort_algorithm/sort_under_6_nodes/sort_5_nodes.c srcs/sort_data/sort_algorithm/sort_under_6_nodes/sort_6_nodes.c srcs/sort_data/sort_algorithm/sort_under_6_nodes/sort_under_6_nodes.c
+SRCS		=	srcs/mandantory/main.c srcs/mandantory/check_arg/check_arg.c srcs/mandantory/check_arg/check_is_arg_digit.c srcs/mandantory/check_arg/check_is_arg_exist.c srcs/mandantory/check_arg/check_is_arg_int.c srcs/mandantory/free_data/free_data.c srcs/mandantory/get_data/get_data.c srcs/mandantory/get_data/get_data_utils.c srcs/mandantory/get_data/get_nth_smallest_order.c srcs/mandantory/sort_data/sort_data.c srcs/mandantory/sort_data/sort_utils.c srcs/mandantory/utils/utils.c srcs/mandantory/sort_data/sort_operations/pa.c srcs/mandantory/sort_data/sort_operations/pb.c srcs/mandantory/sort_data/sort_operations/ra.c srcs/mandantory/sort_data/sort_operations/rb.c srcs/mandantory/sort_data/sort_operations/rr.c srcs/mandantory/sort_data/sort_operations/rra.c srcs/mandantory/sort_data/sort_operations/rrb.c srcs/mandantory/sort_data/sort_operations/rrr.c srcs/mandantory/sort_data/sort_operations/sa.c srcs/mandantory/sort_data/sort_operations/sb.c srcs/mandantory/sort_data/sort_operations/ss.c srcs/mandantory/utils/node/add_first_node_to_last_node.c srcs/mandantory/utils/node/add_last_node_to_first_node.c srcs/mandantory/utils/node/del_beginning_node.c srcs/mandantory/utils/node/del_end_node.c srcs/mandantory/utils/node/ft_nodeadd_back.c srcs/mandantory/utils/node/ft_nodeadd_front.c srcs/mandantory/utils/node/ft_nodeclear.c srcs/mandantory/utils/node/ft_nodedelone.c srcs/mandantory/utils/node/ft_nodefirst.c srcs/mandantory/utils/node/ft_nodelast.c srcs/mandantory/utils/node/ft_nodenew.c srcs/mandantory/utils/node/ft_nodenext.c srcs/mandantory/utils/node/ft_nodesize.c srcs/mandantory/utils/node/is_node_sorted.c srcs/mandantory/sort_data/sort_algorithm/radix_sort/radix_sort.c srcs/mandantory/sort_data/sort_algorithm/sort_under_6_nodes/sort_2_nodes.c srcs/mandantory/sort_data/sort_algorithm/sort_under_6_nodes/sort_2_nodes_in_descending.c srcs/mandantory/sort_data/sort_algorithm/sort_under_6_nodes/sort_3_nodes.c srcs/mandantory/sort_data/sort_algorithm/sort_under_6_nodes/sort_3_nodes_in_descending.c srcs/mandantory/sort_data/sort_algorithm/sort_under_6_nodes/sort_4_nodes.c srcs/mandantory/sort_data/sort_algorithm/sort_under_6_nodes/sort_5_nodes.c srcs/mandantory/sort_data/sort_algorithm/sort_under_6_nodes/sort_6_nodes.c srcs/mandantory/sort_data/sort_algorithm/sort_under_6_nodes/sort_under_6_nodes.c
 
 OBJS		=	$(patsubst $(SRCS_DIR)%.c, $(OBJS_DIR)%.o, $(SRCS))
 
@@ -32,7 +32,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS) Makefile
 	@ make bonus -C $(LIBFT_DIR)
-	@ $(CC) $(CFLAGS) $(LIBFT_DIR)libft.a $(OBJS) -o $(NAME)
+	@ $(CC) $(CFLAGS) $(LIBFT_DIR)libft.a -I $(INCS_DIR) $(OBJS) -o $(NAME)
 	@ echo "compile to create an executable file: ./$@"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 00:12:11 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 12:34:25 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ long	get_content_in_order(t_node *node, int order);
 int		get_nth_smallest_order(t_node *node, int nth);
 void	ra_until_order(t_data *data, int order_1, int order_2, int order_3);
 void	push_tail_a(t_data *data);
+void	pa_all(t_data *data);
 
 #endif

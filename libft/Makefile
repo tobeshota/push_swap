@@ -6,7 +6,7 @@
 #    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/10/13 00:38:11 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/21 12:55:03 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		=	libft.a
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 AR			=	ar rc
-RM			=	rm -f
+RM			=	rm -rf
 PRINTF_DIR	=	ft_printf/
 SRCS_DIR	=	srcs/
 OBJS_DIR	=	objs/
@@ -58,7 +58,7 @@ bonus:
 
 clean:
 	@ make clean -C $(PRINTF_DIR)
-	@ $(RM) $(patsubst $(SRCS_DIR)%.c, $(OBJS_DIR)%.o, $(M_SRCS)) $(patsubst $(SRCS_DIR)%.c, $(OBJS_DIR)%.o, $(B_SRCS))
+	@ $(RM) $(OBJS_DIR)
 
 fclean:			clean
 	@ make fclean -C $(PRINTF_DIR)

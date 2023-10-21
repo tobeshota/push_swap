@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   sort_2_nodes_in_descending.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:29:11 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/21 00:32:37 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/21 12:30:17 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "sort_data.h"
 
-# include "check_arg.h"
-# include "define.h"
-# include "free_data.h"
-# include "get_data.h"
-# include "sort_data.h"
-# include "utils.h"
+void	sort_2_nodes_a_in_descending(t_data *data)
+{
+	if (data->stack_a.head->content < data->stack_a.head->next->content)
+		sa(data);
+}
 
-#endif
+void	sort_2_nodes_b_in_descending(t_data *data)
+{
+	if (data->stack_b.head->content < data->stack_b.head->next->content)
+		sb(data);
+}

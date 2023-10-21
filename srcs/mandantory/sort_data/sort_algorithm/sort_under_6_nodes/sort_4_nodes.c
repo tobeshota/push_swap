@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   sort_4_nodes.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:29:11 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/20 16:39:47 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/21 12:30:17 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "sort_data.h"
 
-# include "check_arg.h"
-# include "define.h"
-# include "free_data.h"
-# include "get_data.h"
-# include "sort_data.h"
-# include "utils.h"
+static void	pb_largest_1_node(t_data *data)
+{
+	ra_until_order(data, 1, NOT_SPECIFIED_ORDER, NOT_SPECIFIED_ORDER);
+	pb(data);
+}
 
-#endif
+void	sort_4_nodes(t_data *data)
+{
+	pb_largest_1_node(data);
+	sort_3_nodes_a(data);
+	pa(data);
+}

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_nodenew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:23:25 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:29:11 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/16 20:47:41 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/21 12:30:17 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "utils.h"
 
-# include "check_arg.h"
-# include "define.h"
-# include "free_data.h"
-# include "get_data.h"
-# include "sort_data.h"
-# include "utils.h"
+t_node	*ft_nodenew(int content)
+{
+	t_node	*newnode;
 
-#endif
+	newnode = (t_node *)malloc(sizeof(t_node));
+	if (newnode == NULL)
+		return (NULL);
+	newnode->content = content;
+	newnode->next = NULL;
+	newnode->prev = NULL;
+	newnode->order = 1;
+	return (newnode);
+}
