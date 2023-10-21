@@ -1,6 +1,6 @@
 # debug files
 .vscode/
-*.dSTM/
+*.dSYM/
 
 # output files
 *.out

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 23:45:00 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/22 08:28:35 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int	main(int argc, char **argv)
 
 // __attribute__((destructor)) static void destructor()
 // {
-// 	system("leaks -q push_swap");
+// 	system("leaks -q checker");
 // }

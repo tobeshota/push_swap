@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 23:31:24 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 23:52:16 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/22 08:29:34 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	exit_with_ko(void)
 void	check_is_node_sorted(t_node *node)
 {
 	if (ft_nodesize(node) == 0 || ft_nodesize(node) == 1)
-		return ;
+		exit(0);
 	if (ft_nodesize(node) == 2)
 	{
 		if (node->content < node->next->content)
@@ -38,7 +38,7 @@ void	check_is_node_sorted(t_node *node)
 		while (node->next)
 		{
 			if (node->content > node->next->content)
-				return ;
+				exit_with_ko();
 			node = node->next;
 		}
 		exit_with_ok();
@@ -49,27 +49,27 @@ void	check_is_node_sorted(t_node *node)
 static void	sort_by_operations(t_data *data, char *sort_operations)
 {
 	if (!ft_strncmp(sort_operations, "sa\n", 4))
-		sa(data);
+		sa_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "sb\n", 4))
-		sb(data);
+		sb_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "ss\n", 4))
-		ss(data);
+		ss_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "pa\n", 4))
-		pa(data);
+		pa_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "pb\n", 4))
-		pb(data);
+		pb_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "ra\n", 4))
-		ra(data);
+		ra_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "rb\n", 4))
-		rb(data);
+		rb_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "rr\n", 4))
-		rr(data);
+		rr_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "rra\n", 4))
-		rra(data);
+		rra_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "rrb\n", 4))
-		rrb(data);
+		rrb_without_msg(data);
 	else if (!ft_strncmp(sort_operations, "rrr\n", 4))
-		rrr(data);
+		rrr_without_msg(data);
 	else
 		exit_with_error();
 }

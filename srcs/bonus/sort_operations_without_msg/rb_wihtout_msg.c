@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   rb_wihtout_msg.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:04:21 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/22 08:32:38 by toshota          ###   ########.fr       */
+/*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
+/*   Updated: 2023/10/22 08:21:28 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../../inc/checker.h"
 
-int	main(int argc, char **argv)
+void	rb_without_msg(t_data *data)
 {
-	t_data	data;
-
-	check_arg(argc, argv);
-	data = get_data(argv);
-	sort_data(&data);
-	free_data(&data);
+	if (ft_nodesize(data->stack_b.head) < 2)
+		return ;
+	add_first_node_to_last_node(&data->stack_b.head);
+	del_beginning_node(&data->stack_b.head);
 }
-
-// __attribute__((destructor)) static void destructor()
-// {
-// 	system("leaks -q push_swap");
-// }
