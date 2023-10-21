@@ -11,5 +11,6 @@ push_swap
 *.a
 
 # test
-checker*
+checker_Mac
+checker
 pain/
