@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:24:49 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:30:17 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/21 23:18:39 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	all_free_tab(char **ptr)
 
 void	exit_with_error(void)
 {
-	write(STDERR_FILENO, "error\n", 7);
+	write(STDERR_FILENO, "Error\n", 7);
 	exit(2);
 }
 
