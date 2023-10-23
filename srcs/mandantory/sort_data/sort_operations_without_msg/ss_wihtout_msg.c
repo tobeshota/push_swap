@@ -6,11 +6,11 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/22 08:21:51 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/23 09:41:15 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/checker.h"
+#include "sort_data.h"
 
 void	ss_without_msg(t_data *data)
 {

@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:34:25 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/23 09:39:26 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,19 @@ void	rr(t_data *data);
 void	rra(t_data *data);
 void	rrb(t_data *data);
 void	rrr(t_data *data);
+
+// sort_operations_without_msg
+void	sa_without_msg(t_data *data);
+void	sb_without_msg(t_data *data);
+void	ss_without_msg(t_data *data);
+void	pa_without_msg(t_data *data);
+void	pb_without_msg(t_data *data);
+void	ra_without_msg(t_data *data);
+void	rb_without_msg(t_data *data);
+void	rr_without_msg(t_data *data);
+void	rra_without_msg(t_data *data);
+void	rrb_without_msg(t_data *data);
+void	rrr_without_msg(t_data *data);
 
 // sort_utils
 long	get_content_in_order(t_node *node, int order);

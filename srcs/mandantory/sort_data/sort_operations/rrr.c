@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:30:17 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/23 09:42:00 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	rrr(t_data *data)
 {
-	rra(data);
-	rrb(data);
+	rra_without_msg(data);
+	rrb_without_msg(data);
+	ft_printf("rrr\n");
 }
