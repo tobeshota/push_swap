@@ -6,13 +6,13 @@
 #    By: toshota <toshota@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/10/23 13:33:38 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/23 13:40:03 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
 B_NAME		=	checker
-CC			=	cc -g
+CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 AR			=	ar rc
 RM			=	rm -rf
