@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   del_beginning_node.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 20:41:01 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/21 12:30:17 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/23 13:13:43 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	del_beginning_node(t_node **node)
 
 	tmp = *node;
 	*node = (*node)->next;
-	if (ft_nodesize(*node) > 1)
+	if (ft_nodesize(*node) >= 1)
 		(*node)->prev = NULL;
 	ft_nodedelone(tmp);
 }

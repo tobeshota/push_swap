@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_data.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:43:42 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/23 09:39:26 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/23 13:01:43 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	rrr_without_msg(t_data *data);
 
 // sort_utils
 long	get_content_in_order(t_node *node, int order);
-int		get_nth_smallest_order(t_node *node, int nth);
+int		get_nth_min_order(t_node *node, int nth);
 void	ra_until_order(t_data *data, int order_1, int order_2, int order_3);
 void	push_tail_a(t_data *data);
 void	pa_all(t_data *data);

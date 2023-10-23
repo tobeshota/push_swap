@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:17:41 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/23 10:09:58 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/23 11:12:53 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	is_not_last_node(int size_i, t_data *data)
 	return (size_i < data->stack_a.size - 1);
 }
 
-static void	push_ith_bit_as_1_to_b(t_data *data, int bits_ith)
+static void	push_ith_bit_as_0_to_b(t_data *data, int bits_ith)
 {
 	int	size_i;
 
@@ -56,7 +56,7 @@ void	radix_sort(t_data *data)
 	bits_ith = 0;
 	while (bits_ith < get_max_bits(data->stack_a.head))
 	{
-		push_ith_bit_as_1_to_b(data, bits_ith);
+		push_ith_bit_as_0_to_b(data, bits_ith);
 		pa_all(data);
 		bits_ith++;
 	}

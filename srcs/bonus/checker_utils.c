@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 23:31:24 by toshota           #+#    #+#             */
-/*   Updated: 2023/10/22 08:29:34 by toshota          ###   ########.fr       */
+/*   Updated: 2023/10/23 12:58:31 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,17 @@ static void	exit_with_ko(void)
 	exit(0);
 }
 
-void	check_is_node_sorted(t_node *node)
+void	check_is_data_sorted(t_data *data)
 {
-	if (ft_nodesize(node) == 0 || ft_nodesize(node) == 1)
-		exit(0);
-	if (ft_nodesize(node) == 2)
+	if (ft_nodesize(data->stack_b.head) != 0)
+		exit_with_ko();
+	while (data->stack_a.head->next)
 	{
-		if (node->content < node->next->content)
-			exit_with_ok();
+		if (data->stack_a.head->content > data->stack_a.head->next->content)
+			exit_with_ko();
+		data->stack_a.head = data->stack_a.head->next;
 	}
-	else
-	{
-		while (node->next)
-		{
-			if (node->content > node->next->content)
-				exit_with_ko();
-			node = node->next;
-		}
-		exit_with_ok();
-	}
-	exit_with_ko();
+	exit_with_ok();
 }
 
 static void	sort_by_operations(t_data *data, char *sort_operations)

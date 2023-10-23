@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_nth_smallest_order.c                           :+:      :+:    :+:   */
+/*   get_nth_min_order.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -49,7 +49,7 @@ static void	bubble_sort_array(int *array, int size)
 	}
 }
 
-int	get_nth_smallest_order(t_node *node, int nth)
+int	get_nth_min_order(t_node *node, int nth)
 {
 	int	*order_array;
 	int	result;
